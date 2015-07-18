@@ -1,0 +1,35 @@
+#!/usr/bin/env ruby
+
+require 'fancy_audio'
+include FancyAudio::Operations
+include FancyAudio::PrettyPrinter
+
+first = ARGV[0]
+second = ARGV[1]
+
+def print_help
+  help = <<-info
+    fancy_audio audio_file image_file  #=> attach image_file to audio_file
+    fancy_audio                        #=> attach all audio and images with same name(default current dir) e.g song1.mp3 and song1.jpg
+    fancy_audio path/to/files          #=> attach all audio and images with same name(cutom path to dir) e.g song1.mp3 and song1.jpg
+    fancy_audio --h                    #=> to print help
+  info
+
+  print_info help
+end
+
+if first == '--h' && ARGV.size == 1
+  print_help
+
+elsif !first.nil? && !second.nil? && ARGV.size == 2
+  add_image first, second
+
+elsif ARGV.size.zero?
+  add_image_smartly
+
+elsif ARGV.size == 1
+  add_image_smartly first
+
+else
+  print_error "Wrong Usages! To know the right usages type 'fancy_audio --h'"
+end
