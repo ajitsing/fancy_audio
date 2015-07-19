@@ -11,6 +11,8 @@ Gem::Specification.new do |s|
   s.description                 =   s.summary
   s.authors                     =   ['Ajit Singh']
   s.email                       =   'jeetsingh.ajit@gamil.com'
+  s.license                     =   'MIT'
+  s.homepage                    =   'http://www.singhajit.com/fancyaudio-gem-to-add-album-cover-to-audio-file/'
 
   s.files                       =   `git ls-files -z`.split("\x0")
   s.executables                 =   s.files.grep(%r{^bin/}) { |f| File.basename(f)  }
