@@ -4,32 +4,48 @@ require 'fancy_audio'
 include FancyAudio::Operations
 include FancyAudio::PrettyPrinter
 
-first = ARGV[0]
-second = ARGV[1]
-
 def print_help
   help = <<-info
     fancy_audio audio_file image_file  #=> attach image_file to audio_file
     fancy_audio                        #=> attach all audio and images with same name(default current dir) e.g song1.mp3 and song1.jpg
     fancy_audio path/to/files          #=> attach all audio and images with same name(cutom path to dir) e.g song1.mp3 and song1.jpg
     fancy_audio --h                    #=> to print help
+
+    To see a demo visit - http://www.singhajit.com/fancyaudio-gem-to-add-album-cover-to-audio-file/
   info
 
   print_info help
 end
 
-if first == '--h' && ARGV.size == 1
-  print_help
+def execute
+  first = ARGV[0]
+  second = ARGV[1]
 
-elsif !first.nil? && !second.nil? && ARGV.size == 2
-  add_image first, second
+  if first == '--h' && ARGV.size == 1
+    print_help
 
-elsif ARGV.size.zero?
-  add_image_smartly
+  elsif !first.nil? && !second.nil? && ARGV.size == 2
+    add_image first, second
 
-elsif ARGV.size == 1
-  add_image_smartly first
+  elsif ARGV.size.zero?
+    add_image_smartly
 
-else
-  print_error "Wrong Usages! To know the right usages type 'fancy_audio --h'"
+  elsif ARGV.size == 1
+    add_image_smartly first
+
+  else
+    print_error "Wrong Usages! To know the right usages type 'fancy_audio --h'"
+  end
 end
+
+begin
+  execute
+rescue
+  error_msg = <<-error
+    Something went wrong! Or usages is incorrect
+    To understand the corrent usages visit - http://www.singhajit.com/fancyaudio-gem-to-add-album-cover-to-audio-file/
+  error
+
+  print_error error_msg
+end
+
