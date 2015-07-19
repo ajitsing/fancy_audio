@@ -1,6 +1,9 @@
 # fancy_audio
 A gem to add album cover to audio file
 
+##Documentation
+http://www.singhajit.com/fancyaudio-gem-to-add-album-cover-to-audio-file/
+
 ## Contributing
 
 1. Fork it ( http://github.com/ajitsing/fancy_audio )
