@@ -25,6 +25,12 @@ def assert_audio_has_image(audio)
   end
 end
 
+def assert_audio_does_not_have_image(audio)
+  Mp3Info.open(audio) do |song|
+    song.tag2.pictures.empty?.should be_truthy
+  end
+end
+
 def remove_pictures_from_songs
   current_dir = File.expand_path File.dirname __FILE__
   songs = Dir[current_dir + "/resources/*.mp3"]

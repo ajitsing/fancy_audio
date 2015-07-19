@@ -8,6 +8,8 @@ module FancyAudio
     IMAGE_NOT_FOUND = 'File Not Found'
 
     def add_image(audio_file, image)
+      return unless files_present(audio_file, image)
+
       image_file = File.new(image, 'rb')
       Mp3Info.open(audio_file) do |audio|
         audio.tag2.remove_pictures
@@ -39,6 +41,19 @@ module FancyAudio
     end
 
     private
+    def files_present(audio_file, image_file)
+      audio_file_exists = File.exist?(audio_file)
+      image_file_exists = File.exist?(image_file)
+
+      if !audio_file_exists
+        print_error "#{audio_file} does not exists!\n"
+      elsif !image_file_exists
+        print_error "#{image_file} does not exists!\n"
+      end
+
+      audio_file_exists && image_file_exists
+    end
+
     def print_modified_files(files)
       return if files.empty?
       print_info("Modified Audio Files\n")
