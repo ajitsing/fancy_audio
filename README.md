@@ -2,7 +2,7 @@
 A gem to add album cover to audio file
 
 ##Documentation
-http://www.singhajit.com/fancyaudio-gem-to-add-album-cover-to-audio-file/
+http://www.singhajit.com/add-album-cover-to-mp3-file/
 
 ## Contributing
 
