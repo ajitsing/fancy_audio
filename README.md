@@ -1,4 +1,6 @@
 # fancy_audio
+[![Gem Version](https://badge.fury.io/rb/fancy_audio.svg)](http://badge.fury.io/rb/fancy_audio)
+
 A gem to add album cover to audio file
 
 ##Documentation
