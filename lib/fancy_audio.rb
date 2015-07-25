@@ -17,6 +17,15 @@ module FancyAudio
       end
     end
 
+    def add_image_to_all(dir = `pwd`.chop, image)
+      audio_files = Dir[dir + "/*.mp3"]
+
+      audio_files.each do |audio_file|
+        add_image(audio_file, image)
+      end
+      print_info "done!"
+    end
+
     def add_image_smartly(dir = `pwd`.chop)
       unavialble_images = []
       changed_audio_files = {}

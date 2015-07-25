@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    fancy_audio (0.0.1)
+    fancy_audio (0.0.4)
       ruby-mp3info (~> 0.8.5)
 
 GEM

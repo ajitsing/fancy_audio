@@ -45,5 +45,16 @@ describe :FancyAudio do
       assert_audio_has_image audio_file
     end
   end
+
+  it 'should add image to all songs' do
+    current_dir = File.expand_path File.dirname __FILE__
+    audio_file_1 = current_dir + '/resources/song1.mp3'
+    audio_file_2 = current_dir + '/resources/song2.mp3'
+    image_file = current_dir + '/resources/song1.jpg'
+
+    add_image_to_all(current_dir + '/resources/', image_file)
+    assert_audio_has_image audio_file_1
+    assert_audio_has_image audio_file_2
+  end
 end
 

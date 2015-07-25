@@ -6,6 +6,7 @@ include FancyAudio::PrettyPrinter
 
 def print_help
   help = <<-info
+    fancy_audio --all /path/to/songs image_file  #=> attach image_file to all audio_files.(default songs path is current directory)
     fancy_audio audio_file image_file  #=> attach image_file to audio_file
     fancy_audio                        #=> attach all audio and images with same name(default current dir) e.g song1.mp3 and song1.jpg
     fancy_audio path/to/files          #=> attach all audio and images with same name(cutom path to dir) e.g song1.mp3 and song1.jpg
@@ -17,12 +18,26 @@ def print_help
   print_info help
 end
 
+def add_image_to_all_songs
+  second = ARGV[1]
+  third = ARGV[2]
+
+  if ARGV.size == 2
+    add_image_to_all second
+  elsif ARGV.size == 3
+    add_image_to_all second, third
+  end
+end
+
 def execute
   first = ARGV[0]
   second = ARGV[1]
 
   if first == '--h' && ARGV.size == 1
     print_help
+
+  elsif first == '--all'
+    add_image_to_all_songs
 
   elsif !first.nil? && !second.nil? && ARGV.size == 2
     add_image first, second
@@ -43,7 +58,7 @@ begin
 rescue
   error_msg = <<-error
     Something went wrong! Or usages is incorrect
-    To understand the corrent usages visit - http://www.singhajit.com/fancyaudio-gem-to-add-album-cover-to-audio-file/
+    To understand the correct usages visit - http://www.singhajit.com/fancyaudio-gem-to-add-album-cover-to-audio-file/
   error
 
   print_error error_msg

@@ -6,7 +6,7 @@ require 'fancy_audio/version'
 Gem::Specification.new do |s|
   s.name                        =   'fancy_audio'
   s.version                     =   FancyAudio::VERSION
-  s.date                        =   '2015-07-18'
+  s.date                        =   '2015-07-25'
   s.summary                     =   'Gem to add an album cover to the audio'
   s.description                 =   s.summary
   s.authors                     =   ['Ajit Singh']
