@@ -6,6 +6,9 @@ A gem to add album cover to audio file
 ##Documentation
 http://www.singhajit.com/add-album-cover-to-mp3-file/
 
+##Demo Video
+[![IMAGE ALT TEXT](http://img.youtube.com/vi/woqHqBDslWo/0.jpg)](https://www.youtube.com/watch?v=woqHqBDslWo "Demo")
+
 ## Contributing
 
 1. Fork it ( http://github.com/ajitsing/fancy_audio )
