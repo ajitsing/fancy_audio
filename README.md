@@ -1,12 +1,15 @@
 # fancy_audio
 [![Gem Version](https://badge.fury.io/rb/fancy_audio.svg)](http://badge.fury.io/rb/fancy_audio)
+![Gem Downloads](http://ruby-gem-downloads-badge.herokuapp.com/fancy_audio?type=total)
+[![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=102)](https://opensource.org/licenses/MIT)
+
 
 A gem to add album cover to audio file
 
-##Documentation
+## Documentation
 http://www.singhajit.com/add-album-cover-to-mp3-file/
 
-##Demo Video
+## Demo Video
 [![IMAGE ALT TEXT](http://img.youtube.com/vi/woqHqBDslWo/0.jpg)](https://www.youtube.com/watch?v=woqHqBDslWo "Demo")
 
 ## Contributing
