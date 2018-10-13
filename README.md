@@ -1,5 +1,6 @@
 # fancy_audio
 [![Gem Version](https://badge.fury.io/rb/fancy_audio.svg)](http://badge.fury.io/rb/fancy_audio)
+[![HitCount](http://hits.dwyl.io/ajitsing/fancy_audio.svg)](http://hits.dwyl.io/ajitsing/fancy_audio)
 ![Gem Downloads](http://ruby-gem-downloads-badge.herokuapp.com/fancy_audio?type=total)
 [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=102)](https://opensource.org/licenses/MIT)
 [![Twitter Follow](https://img.shields.io/twitter/follow/Ajit5ingh.svg?style=social)](https://twitter.com/Ajit5ingh)
