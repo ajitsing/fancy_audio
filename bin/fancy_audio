@@ -33,7 +33,7 @@ def execute
   first = ARGV[0]
   second = ARGV[1]
 
-  if first == '--h' && ARGV.size == 1
+  if ['--h', '--help', '-h', '-?'].include?(first) && ARGV.size == 1
     print_help
 
   elsif first == '--all'
