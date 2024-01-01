@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe :FancyAudio do
 
-  before(:each) do
+  after(:each) do
    remove_pictures_from_songs
   end
 
